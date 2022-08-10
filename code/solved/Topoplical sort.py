@@ -1,6 +1,9 @@
 import sys
 import graphlib
 
+
+# GIVES TLE...
+# Basically its impossible to solve in python.
 def get_int():
     return [int(x) for x in sys.stdin.readline().strip("\n\r").split()]
 
