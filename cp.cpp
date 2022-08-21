@@ -1,4 +1,4 @@
-#pragma GCC optimize("Ofast")
+#pragma GCC optimize("Ofast,unroll-loops")
 #include <bits/stdc++.h>
 using namespace std;
 #define FASTIO ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
@@ -7,10 +7,29 @@ using namespace std;
 #define vi vector<int>
 #define pii pair<int, int>
 
+void unioqize(vi& arr)
+{
+    auto s = unique(all(arr));
+    arr.erase(s, arr.end());
+}
 
 void solve()
 {
-   
+    int n;
+    vi nums(n),uni(n);
+    for (int i = 0;i < n; ++i)
+    {
+        scanf("%d", &nums[i]);
+        uni[i] = nums[i];
+    }
+    auto u = unique(all(uni));
+    uni.erase(u, uni.end());
+    while (1)
+    {
+    if (sz(uni) == sz(nums))
+        unioqize(uni);
+        if 
+    }
 }
 
 int32_t main()
@@ -20,7 +39,7 @@ int32_t main()
     freopen("input.txt","r",stdin);
     #endif
     int t = 1;
-    cin >> t;
+    scanf("%d", &t);
     while (t--)
     {
         solve();
