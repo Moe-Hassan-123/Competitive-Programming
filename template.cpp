@@ -6,7 +6,6 @@ using namespace std;
 #define rall(x) (x).rbegin(), (x).rend()
 #define sz(x) ((int) (x).size())
 #define vi vector<int>
-#define pii pair<int, int>
 
 
 void solve()
