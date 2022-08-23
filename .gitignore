@@ -2,3 +2,8 @@ gen.py
 .vscode/launch.json
 gen.txt
 cp.cpp
+.gitignore
+cp.py
+input.txt
+i.txt
+out.txt
