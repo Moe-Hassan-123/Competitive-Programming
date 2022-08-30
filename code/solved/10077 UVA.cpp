@@ -1,4 +1,30 @@
-w
+#pragma GCC optimize("Ofast,unroll-loops")
+#include <bits/stdc++.h>
+using namespace std;
+#define FASTIO ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define sz(x) ((int) (x).size())
+
+#define p push_back
+#define f first
+#define s second
+
+
+const double EPS = 1e-9;
+
+// 1 if x is bigger, -1 is y is bigger, 0 if equals
+int cmp(double x, double y)
+{
+    return (x <= y + EPS) ? (x + EPS < y) ? -1 : 0 : 1;
+}
+
+
+///////////////////////////////////// START OF SOLUTION /////////////////////////////////////
+
+
+
 struct node {
     int x;
     int y;
@@ -20,11 +46,6 @@ string solve(node target)
         {
         case 0: // equals
             return result;
-            break;
-        case 1: // mid is bigger
-            right = mid;
-            mid.x += left.x;
-            mid.y += left.y;
             result += "L";
             break;
         case -1: // cur is bigger
